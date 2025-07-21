@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangu Ajay Satish - Portfolio</title>
+  <body>
+    <style>/* Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Top Navigation Section */
+.top-nav-sec {
+    background-color: #283739; /* Dark blue-grey */
+    padding: 10px 0;
+    color: #fff;
+    position: fixed;
+    width:100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(82, 72, 72, 0.2);
+}
+
+.top-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.center-btn-area ul {
+    list-style: none;
+    display: flex;
+}
+
+.center-btn-area ul li {
+    margin-left: 30px;
+}
+
+.center-btn-area ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.center-btn-area ul li a:hover {
+    color: #3498db; /* Light blue */
+}
+
+/* Landing Section */
+.landing-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./images/hero-background.jpg') no-repeat center center/cover; /* Placeholder background */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 80px; /* To account for fixed nav */
+}
+
+.landing-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.landing-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.landing-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-colored {
+    color: #3498db; /* Light blue */
+}
+
+.button-look {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.button-look:hover {
+    background-color: #1474b5;
+}
+
+.white-btn {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.white-btn:hover {
+    background-color: #eee;
+}
+
+/* General Section Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    margin-bottom: 50px;
+    padding-top: 80px;
+}
+
+.section-title h4 {
+    color: #3498db;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.about-content h4 {
+    color: #3498db;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.about-content h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.about-content ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.about-content ul li {
+    margin-bottom: 10px;
+}
+
+.about-content ul li span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Skills Section (More complex due to mockups, general styling below) */
+.skills-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.device-mockup {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.device-mockup .selections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+.device-mockup .select-card {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.device-mockup .select-card:hover {
+    background-color: #eaf6ff;
+    border-color: #3498db;
+    transform: translateY(-5px);
+}
+
+.device-mockup .icon-wrapper {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+.device-mockup .select-card .title {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.experience-timeline h3 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.single-experience-item {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 2px solid #3498db;
+    position: relative;
+}
+
+.single-experience-item:last-child {
+    margin-bottom: 0;
+}
+
+.single-experience-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #3498db;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.single-experience-item h4 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.single-experience-item span {
+    display: block;
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.single-experience-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+.single-experience-item p a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.single-experience-item p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Portfolio Section */
+.horizontal-scroll-container.pricing-section { /* Reusing the class from original structure */
+    padding: 80px 0;
+    background-color: #f4f4f4;
+}
+
+.all-portfolio {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap for responsiveness */
+    gap: 30px; /* Space between portfolio items */
+    justify-content: center; /* Center items if they don't fill a row */
+}
+
+.show-all-portfolio {
+    flex: 0 0 calc(33.33% - 20px); /* 3 items per row with gap */
+    max-width: calc(33.33% - 20px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.show-all-portfolio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.show-all-portfolio .image-wrapper img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    display: block;
+}
+
+.show-all-portfolio .text-wrapper {
+    padding: 20px;
+}
+
+.show-all-portfolio .text-wrapper h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.show-all-portfolio .text-wrapper p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.show-all-portfolio .link-wrapper {
+    color: #3498db;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.show-all-portfolio .link-wrapper i {
+    margin-right: 8px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.contact-info {
+    padding-right: 30px;
+}
+
+.contact-info h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-info ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.contact-info ul li {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.contact-info ul li i {
+    color: #3498db;
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.contact-info ul li a {
+    color: #555;
+    text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+    color: #3498db;
+}
+
+.contact-form-wrapper form input[type="text"],
+.contact-form-wrapper form input[type="email"],
+.contact-form-wrapper form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.contact-form-wrapper form textarea {
+    resize: vertical; /* Allows vertical resizing */
+    min-height: 120px;
+}
+
+.contact-form-wrapper form button {
+    width: auto;
+    cursor: pointer;
+}
+
+/* Social Links */
+.social-links a {
+    display: inline-block;
+    color: #333;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #000000;
+    color: #b69f9f;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-section p {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.footer-section .social-links a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.footer-section .social-links a:hover {
+    color: #3498db;
+}
+
+/* Responsive Adjustments (Basic) */
+@media (max-width: 992px) {
+    .top-nav-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .center-btn-area {
+        display: none; /* Hide desktop nav for smaller screens */
+    }
+
+    .side-menu-burger {
+        display: block; /* Show burger icon */
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .landing-content h1 {
+        font-size: 2.5em;
+    }
+
+    .landing-content h2 {
+        font-size: 1.5em;
+    }
+
+    .about-section .row {
+        flex-direction: column; /* Stack about content on small screens */
+    }
+
+    .about-image {
+        margin-bottom: 30px;
+        order: 1; /* Image first on small screens */
+    }
+
+    .about-content {
+        order: 2;
+    }
+
+    .show-all-portfolio {
+        flex: 0 0 calc(50% - 20px); /* 2 items per row on tablets */
+        max-width: calc(50% - 20px);
+    }
+
+    .contact-info {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-nav-wrapper {
+        justify-content: space-between;
+    }
+
+    .logo {
+        flex-grow: 1;
+        text-align: left;
+    }
+
+    .landing-content h1 {
+        font-size: 2em;
+    }
+
+    .landing-content h2 {
+        font-size: 1.2em;
+    }
+
+    .button-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button-look {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .device-mockup {
+        margin-bottom: 50px;
+    }
+
+    .show-all-portfolio {
+        flex: 0 0 90%; /* Single item per row on mobile */
+        max-width: 90%;
+        margin: 0 auto 30px auto; /* Center single items */
+    }
+
+    .single-experience-item {
+        padding-left: 15px;
+        border-left: 1px solid #3498db;
+    }
+
+    .single-experience-item::before {
+        left: -6px;
+        width: 12px;
+        height: 12px;
+    }
+
+    /* Mobile specific navigation (if you implement a JS toggle) */
+    .mobile-bottom-contact {
+        display: none; /* Hidden by default, would be shown with JS toggle */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+        z-index: 999;
+        text-align: center;
+    }
+
+    .mobile-bottom-contact .info-area {
+        margin-bottom: 15px;
+    }
+
+    .mobile-bottom-contact .social-links a {
+        color: #fff;
+        font-size: 22px;
+        margin: 0 10px;
+    }
+}</style>
+    <link rel="icon" type="image/png" href="./images/favicon.png"> </head>
+</body>
+
+    <div class="top-nav-sec">
+        <div class="top-nav-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="top-nav">
+                            <div class="logo">
+                                <a href="index.html">R.A.S.</a> </div>
+                            <div class="center-btn-area">
+                                <ul>
+                                    <li><a href="#landing" data-target="landing">Home</a></li>
+                                    <li><a href="#about" data-target="about">About</a></li>
+                                    <li><a href="#features" data-target="features">Skills</a></li>
+                                    <li><a href="#portfolio" data-target="portfolio">Portfolio</a></li>
+                                    <li><a href="#contact" data-target="contact">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="side-menu-burger">
+                                <i class="fa fa-bars"></i>
+                            </div>
+                            <div class="mobile-bottom-contact">
+                                <div class="contact-area">
+                                    <div class="info-area">
+                                        <h4>Email</h4>
+                                        <p><a href="mailto:ajaysatish89@gmail.com">ajaysatish89@gmail.com</a></p>
+                                    </div>
+                                    <div class="info-area">
+                                        <h4>Social</h4>
+ <div class="social-links"
+   <a href="https://www.linkedin.com/in/ajay-satish-0a360a250" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://github.com/AJAY-SATISH" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="landing-section" id="landing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="landing-content fade-up-box landing-fade-up-box">
+                        <div class="text-wrapper">
+                            <h2 class="landing-fade-up-item">Hi, I'm <span class="text-colored">Rangu Ajay Satish</span></h2>
+                            <h1 class="landing-fade-up-item">A Passionate <span class="text-colored">Frontend Developer</span></h1>
+                            <p class="landing-fade-up-item">Proficient in Front End Technologies, Python, SQL, and Java, I craft responsive and engaging web experiences.</p>
+                            <div class="button-wrapper landing-fade-up-item">
+                                <a href="#contact" class="get-started button-look">Hire Me</a>
+                                <a href="#portfolio" class="button-look white-btn">My Work</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 order-md-2 order-lg-1">
+                    <div class="about-content fade-up-box">
+                        <h4 class="fade-up-item">About Me</h4>
+                        <h2 class="fade-up-item">Dedicated to Building Engaging User Interfaces.</h2>
+                        <p class="fade-up-item">As a skilled Frontend Developer, I specialize in creating intuitive and visually appealing web applications. My expertise extends to both design and functionality, ensuring a seamless user experience. With a strong foundation in modern web technologies and a keen eye for detail, I transform concepts into robust and elegant digital solutions.</p>
+                        <ul class="fade-up-item">
+                            <li><span>Name:</span> Rangu Ajay Satish</li>
+                            <li><span>Email:</span> <a href="mailto:ajaysatish89@gmail.com">ajaysatish89@gmail.com</a></li>
+                            <li><span>From:</span> Eluru, Andhra Pradesh, India</li>
+                        </ul>
+                        <a href="https://www.linkedin.com/in/ajay-satish-0a360a250" target="_blank" class="button-look fade-up-item">View LinkedIn</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 order-md-1 order-lg-2">
+                    <div class="about-image">
+                        <img src="./images/about-placeholder.jpg" alt="About Me Placeholder" class="img-fluid fade-up-item">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center fade-up-box">
+                        <h4 class="fade-up-item">My Skills</h4>
+                        <h2 class="fade-up-item">Technologies I Master</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="device-mockup laptop-wrapper fade-up-box">
+                        <div class="laptop-screen">
+                            <div class="laptop-cursor"></div>
+                            <div class="selections">
+                                <div class="select-card" data-selection="1">
+    <div class="icon-wrapper"><i class="fab fa-python"></i></div>
+    <h4 class="title">Python</h4>
+</div>
+                                <div class="select-card" data-selection="2">
+                                    <div class="icon-wrapper"><i class="fab fa-java"></i></div>
+                                    <h4 class="title">Java</h4>
+                                </div>
+                                <div class="select-card" data-selection="3">
+                                    <div class="icon-wrapper"><i class="fab fa-html5"></i></div>
+                                    <h4 class="title">HTML & CSS</h4>
+                                </div>
+                                <div class="select-card" data-selection="4">
+                                    <div class="icon-wrapper"><i class="fab fa-js-square"></i></div>
+                                    <h4 class="title">JavaScript</h4>
+                                </div>
+                                <div class="select-card" data-selection="5">
+                                    <div class="icon-wrapper"><i class="fas fa-database"></i></div>
+                                    <h4 class="title">SQL</h4>
+                                </div>
+                                <div class="select-card" data-selection="6">
+                                    <div class="icon-wrapper"><i class="fab fa-aws"></i></div>
+                                    <h4 class="title">AWS</h4>
+                                </div>
+                            </div>
+                            <div class="select-result" style="left: calc(100% + 15px);">
+                                <div class="back-button"><i class="fa fa-angle-left"></i></div>
+                                <div class="result-content">
+                                    <div class="single-result result-1">
+                                        <h3>Python Proficiency</h3>
+                                        <p>Experienced in developing applications and scripts with Python, leveraging its versatility for various tasks including data processing and backend logic.</p>
+                                    </div>
+                                    <div class="single-result result-2">
+                                        <h3>Java Development</h3>
+                                        <p>Skilled in Java for building robust and scalable applications, understanding core concepts of object-oriented programming.</p>
+                                    </div>
+                                    <div class="single-result result-3">
+                                        <h3>HTML & CSS Design</h3>
+                                        <p>Proficient in creating well-structured and beautifully styled web pages using HTML5 and CSS3, focusing on responsive design.</p>
+                                    </div>
+                                    <div class="single-result result-4">
+                                        <h3>JavaScript Interactivity</h3>
+                                        <p>Expert in adding dynamic and interactive elements to websites using JavaScript, enhancing user experience and functionality.</p>
+                                    </div>
+                                    <div class="single-result result-5">
+                                        <h3>SQL Database Management</h3>
+                                        <p>Competent in managing and querying relational databases using SQL, ensuring efficient data storage and retrieval.</p>
+                                    </div>
+                                    <div class="single-result result-6">
+                                        <h3>AWS Cloud Services</h3>
+                                        <p>Familiar with Amazon Web Services (AWS) for cloud deployment and infrastructure management, enabling scalable solutions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="device-mockup phone-wrapper fade-up-box">
+                        <div class="phone-screen">
+                            <div class="phone-cursor"></div>
+                            <div class="selections">
+                                <div class="select-card" data-selection="1">
+                                    <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
+                                    <h4 class="title">Problem Solving</h4>
+                                </div>
+                                <div class="select-card" data-selection="2">
+                                    <div class="icon-wrapper"><i class="fas fa-comments"></i></div>
+                                    <h4 class="title">Communication</h4>
+                                </div>
+                                <div class="select-card" data-selection="3">
+                                    <div class="icon-wrapper"><i class="fas fa-lightbulb"></i></div>
+                                    <h4 class="title">Creativity</h4>
+                                </div>
+                                <div class="select-card" data-selection="4">
+                                    <div class="icon-wrapper"><i class="fas fa-users"></i></div>
+                                    <h4 class="title">Teamwork</h4>
+                                </div>
+                                <div class="select-card" data-selection="5">
+                                    <div class="icon-wrapper"><i class="fas fa-clock"></i></div>
+                                    <h4 class="title">Time Management</h4>
+                                </div>
+                            </div>
+                            <div class="select-result" style="left: calc(100% + 15px);">
+                                <div class="back-button"><i class="fa fa-angle-left"></i></div>
+                                <div class="result-content">
+                                    <div class="single-result result-1">
+                                        <h3>Problem Solving Skills</h3>
+                                        <p>Adept at identifying complex issues and devising effective, innovative solutions in development projects.</p>
+                                    </div>
+                                    <div class="single-result result-2">
+                                        <h3>Effective Communication</h3>
+                                        <p>Strong ability to articulate technical concepts clearly and collaborate effectively with team members and stakeholders.</p>
+                                    </div>
+                                    <div class="single-result result-3">
+                                        <h3>Creative Solutions</h3>
+                                        <p>Bringing a creative approach to design and development, aiming for unique and user-friendly interfaces.</p>
+                                    </div>
+                                    <div class="single-result result-4">
+                                        <h3>Collaborative Team Player</h3>
+                                        <p>Excels in team environments, contributing positively and working synergistically to achieve common goals.</p>
+                                    </div>
+                                    <div class="single-result result-5">
+                                        <h3>Efficient Time Management</h3>
+                                        <p>Capable of prioritizing tasks and managing time effectively to meet deadlines and project objectives.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="experience-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center fade-up-box">
+                        <h4 class="fade-up-item">My Journey</h4>
+                        <h2 class="fade-up-item">Experience & Certifications</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="experience-timeline fade-up-box">
+                        <h3 class="fade-up-item">Professional Experience</h3>
+                        <div class="single-experience-item fade-up-item">
+                            <h4>AWS Cloud Virtual Internship</h4>
+                            <span>AICTE EDUSKILLS / November 2023 - December 2023</span>
+                            <p>Gained practical knowledge and hands-on experience in AWS cloud services, including EC2, S3, IAM, and VPC. Developed foundational skills in cloud architecture and deployment through a structured virtual program.</p>
+                        </div>
+                        </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="experience-timeline fade-up-box">
+                        <h3 class="fade-up-item">Certifications</h3>
+                        <div class="single-experience-item fade-up-item">
+                            <h4>Amazon Cloud Practitioner Essentials</h4>
+                            <span>AWS / 2024</span>
+                            <p><a href="https://drive.google.com/file/d/1-2Y2DNE6cir57LotNBO2IagshzzTlA-R/view?usp=drivesdk" target="_blank">View Certificate</a></p>
+                        </div>
+                        <div class="single-experience-item fade-up-item">
+                            <h4>Zscaler Zero Trust Associate</h4>
+                            <span>Zscaler / 2024</span>
+                            <p><a href="https://drive.google.com/file/d/1-00u9EV_sQ5qp6tis2r2Xg9F-yeb2ey5/view?usp=drivesdk" target="_blank">View Certificate</a></p>
+                        </div>
+                        <div class="single-experience-item fade-up-item">
+                            <h4>Introduction to IoT</h4>
+                            <span>NPTEL / 2023</span>
+                            <p><a href="https://drive.google.com/file/d/1-8YBsI2p7Hz31XTE_DGSqJ4t8816ZcEk/view?usp=drivesdk" target="_blank">View Certificate</a></p>
+                        </div>
+                        <div class="single-experience-item fade-up-item">
+                            <h4>Micro Certification</h4>
+                            <span>ServiceNow / 2023</span>
+                            <p><a href="https://drive.google.com/file/d/1-ALPqSBHJ4idIbDfnxRDWVXeadTrbMUq/view?usp=drivesdk" target="_blank">View Certificate</a></p>
+                        </div>
+                        <div class="single-experience-item fade-up-item">
+                            <h4>Artificial Intelligence</h4>
+                            <span>Accenture in India / 2023</span>
+                            <p><a href="https://drive.google.com/file/d/1-B5nBUilIoAa4Tlcxuolmuqqh5ka4kuK/view?usp=drivesdk" target="_blank">View Certificate</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="horizontal-scroll-container pricing-section" id="portfolio">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center fade-up-box">
+                        <h4 class="fade-up-item">My Work</h4>
+                        <h2 class="fade-up-item">Featured Projects</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="all-portfolio fade-up-box">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 show-all-portfolio fade-up-item">
+                        <a href="https://github.com/AJAY-SATISH/Smart-Surveillance-System-for-Farming-Places" target="_blank" data-id="projects-smart-surveillance">
+                            <div class="image-wrapper">
+                                <img src="./images/PHOTO-2025-03-21-15-29-31.jpg" alt="Smart Surveillance System for Farming Places">
+                            </div>
+                            <div class="text-wrapper">
+                                <h3>Smart Surveillance System for Farming Places using IoT</h3>
+                                <p>Developed an IoT-based surveillance system to monitor farming areas, enhancing security and agricultural management.</p>
+                                <div class="link-wrapper">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center fade-up-box">
+                        <h4 class="fade-up-item">Get in Touch</h4>
+                        <h2 class="fade-up-item">Connect with Me</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 fade-up-box">
+                    <div class="contact-info">
+                        <h3 class="fade-up-item">Let's build something great together.</h3>
+                        <p class="fade-up-item">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!</p>
+                        <ul class="fade-up-item">
+                            <li><i class="fas fa-map-marker-alt"></i> Eluru, Andhra Pradesh, India</li>
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:ajaysatish89@gmail.com">ajaysatish89@gmail.com</a></li>
+                            </ul>
+                        <div class="social-links fade-up-item">
+                            <a href="https://www.linkedin.com/in/ajay-satish-0a360a250" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/AJAY-SATISH" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 fade-up-box">
+                    <div class="contact-form-wrapper">
+                        <h3 class="fade-up-item">Send a Message</h3>
+                        <form id="main_form257" action="#" method="POST" class="fade-up-item">
+                            <input type="text" id="Name0" name="Name" placeholder="Your Name" required>
+                            <input type="email" id="Email2" name="Email" placeholder="Your Email" required>
+                            <textarea id="Message4" name="Message" placeholder="Your Message" rows="5"></textarea>
+                            <button type="submit" class="button-look">Send Message</button>
+                            <action>
+     </action>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer>
+<a href="https://www.linkedin.com/in/ajay-satish-0a360a250" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/AJAY-SATISH" target="_blank"><i class="fab fa-github"></i></a>
+</footer> <div class="footer-section">
+<div class="container">
+ <div class="row">
+<div class="col-md-12 text-center">
+    <a href="https://www.linkedin.com/in/ajay-satish-0a360a250"target="_blank"><i class="fab fa-linkedin"></i>></a>
+
+<p>&copy; <span id="year"></span> Rangu Ajay Satish. All Rights Reserved.</p>
+<a href="https://www.linkedin.com/in/ajay-satish-0a360a250" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/AJAY-SATISH" target="_blank"><i class="fab fa-github"></i></a>
+</div>
+ </div>
+</div>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
